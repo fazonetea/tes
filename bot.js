@@ -122,24 +122,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         fs.readdirSync('./plugins').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
                 require('./plugins/' + plugin);
-            }
-        });
-		
-		fs.readdirSync('./plugins/fazone/').forEach(plugin => {
-            if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./plugins/fazone/' + plugin);
+		require('./plugins/fazone/' + plugin);    
             }
         });
 
         console.log(
             chalk.green.bold('✅ Plugins installed!')			
         );
-		console.log(
+	console.log(
             chalk.green.bold('FAZONE SELF BOT STARTED...')
-		);
-		console.log(
+	);
+	console.log(
             chalk.green.bold('Script By Fazone')
-		);	
+	);	
     });
     
     conn.on('message-new', async msg => {
