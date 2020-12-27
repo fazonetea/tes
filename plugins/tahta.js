@@ -11,7 +11,7 @@ const Asena = require("../events");
 const {MessageType} = require("@adiwajshing/baileys");
 const got = require("got");
 
-Asena.addCommand({pattern: 'tahta ?(.*)', fromMe: true, deleteCommand: false}, (async (message, match) => {
+Asena.addCommand({pattern: 'tahta ?(.*)', deleteCommand: false}, (async (message, match) => {
 	if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS); {
 		try{            
 				var respo = got(`https://api.vhtear.com/hartatahta?text=${match[1]}&apikey=fzntea2020full`);
