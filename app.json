@@ -1,0 +1,73 @@
+{
+    "name": "Whatsgorokgok",
+    "description": "Whatsgorokgok Bot",
+    "logo": "https://i.ibb.co/rxWp4v4/573dcd30eef9.jpg",
+    "keywords": ["whatsapp", "userbot", "Asena"],
+    "repository": "https://github.com/fazonetea/WhatSgorokgok",
+    "website":   "https://gorokgokjasa.freesite.vip",
+    "success_url": "https://t.me/fazone",
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "Kode sesi khusus yang Anda buat dengan kode Qr",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Mode Sudo; Nomor Anda harus nomor internasional. Jadi, Anda harus memiliki nomor Anda setelah kode negara. Contoh: 6285xxxxxxxxx (nomor ID +62)",
+            "required": false
+        },
+        "LANGUAGE": {
+            "description": "Bahasa Bot. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES",
+            "required": true,
+            "value": "ID"
+        },
+        "HANDLERS": {
+            "description": "Kode Perintah.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "SEND_READ": {
+            "description": "Jika Anda ingin membuang seen, ketik benar (true).",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "Jika berjalan di Heroku, ketik benar (true).",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Heroku API Key Wajib isi.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Nama Bot nya.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "Eksklusif untuk pengembang.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "FMenghapus latar belakang foto. https://remove.bg",
+            "required": false
+        },
+        "NO_ONLINE": {
+            "description": "Ketik benar jika Anda tidak ingin terlihat online (true).",
+            "required": false,
+            "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Kunci API CoffeeHouse. Kebutuhan Lydia. https://coffeehouse.intellivoid.net/",
+            "required": false,
+            "value": "true"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }
