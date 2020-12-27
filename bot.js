@@ -121,8 +121,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
 
         fs.readdirSync('./plugins').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./plugins/' + plugin);
-		require('./plugins/fazone/' + plugin);    
+                require('./plugins/' + plugin);  
             }
         });
 
